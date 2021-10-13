@@ -2,24 +2,27 @@ package chapter02;
 
 public class PerdonMain {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public static void main(String[] args) {
 		
-		// Person Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º »ı¼º
+		// Person í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Person p = new Person();
 		
-//		p.memberName = "À¯¿µÁø";
-		p.setMemberName("ÃÖÁ¾Çõ");
-		p.setPhoneNumber("010 - 7777 - 7777");
+		//p.memberName = "ìœ ì˜ì§„";
+		p.setMemberName("ì†í¥ë¯¼");
+		p.setPhoneNumber("010-7777-7777");
 		p.setJuminNumber(9912121111111L);
 		
-		System.out.println("ÀÌ¸§: " + p.getMemberName());
-		System.out.println("ÀüÈ­¹øÈ£: " + p.getPhoneNumber());
-		System.out.println("ÁÖ¹Î¹øÈ£: " + p.getJuminNumber());
+		System.out.println("ì´ë¦„:" + p.getMemberName());
+		System.out.println("ì „í™”ë²ˆí˜¸:"+ p.getPhoneNumber());
+		System.out.println("ì£¼ë¯¼ë²ˆí˜¸:"+ p.getJuminNumber());
 		
-		
-		System.out.println("-------------------------");
+		System.out.println("------------------------------");
 		p.printData();
+		
+		
+		
+		
+
 	}
 
 }
