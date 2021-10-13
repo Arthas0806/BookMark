@@ -1,6 +1,7 @@
 package chapter02;
 
 public class Person {
+<<<<<<< HEAD
 	
 //	2.Person 클래스를 만들어 보고, 아래의 회원 정보를 저장하는 변수들을 선언해봅시다. 
 //	   변수이름을 작성하는 규칙에 맞게 직접 변수 이름을 정의해 보세요.
@@ -8,15 +9,32 @@ public class Person {
 //	② 회원 전화번호 ( 000-0000-0000 )를 저장하는 변수
 //	③ 회원 주민등록번호 ( 000000-0000000 또는 0000000000000 )를 저장하는 변수
 	
+=======
+
+//	2.Person 클래스를 만들어 보고, 아래의 회원 정보를 저장하는 변수들을 선언해봅시다. 
+//	   변수이름을 작성하는 규칙에 맞게 직접 변수 이름을 정의해 보세요.
+//	① 회원이름을 저장하는 변수
+//	② 회원 전화번호 ( 000-0000-0000 )를 저장하는 변수
+//	③ 회원 주민등록번호 ( 000000-0000000 또는 0000000000000 )를 저장하는 변수
+	
+>>>>>>> 7f447c973bf3e0e73d3979a5eb915ed57f018080
 	// private : 클래스 내부에서 멤버들만 참조가 가능하도록 하는 접근 제어자
 	private String memberName;	// 회원의 이름
 	private String phoneNumber;	// 전화번호
 	//String juminNumber;	// 주민등록번호
 	private long juminNumber;
 	
+<<<<<<< HEAD
 	// setter / getter
 	// setter => 값을 받아서 변수에 저장
 	public void setMemberName(String name) {
+=======
+	
+	// setter / getter
+	// setter => 값을 받아서 변수에 저장
+	public void setMemberName(String name) {
+		
+>>>>>>> 7f447c973bf3e0e73d3979a5eb915ed57f018080
 		memberName=name;
 	}
 	// getter => 인스턴스 변수를 반환
