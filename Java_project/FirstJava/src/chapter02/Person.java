@@ -14,9 +14,11 @@ public class Person {
 	//String juminNumber;	// 주민등록번호
 	private long juminNumber;
 	
+	
 	// setter / getter
 	// setter => 값을 받아서 변수에 저장
 	public void setMemberName(String name) {
+		
 		memberName=name;
 	}
 	// getter => 인스턴스 변수를 반환
