@@ -1,10 +1,7 @@
 package chapter02;
 
 public class Member {
-<<<<<<< HEAD
-=======
 
->>>>>>> 7f447c973bf3e0e73d3979a5eb915ed57f018080
 	/*
 	① String 타입의 이름을 저장할 수 있는 변수 name을 정의해봅시다.
 	② int 타입의 나이를 저장할 수 있는 변수 age를 정의해봅시다.
@@ -60,11 +57,11 @@ public class Member {
 		//member.hasBook = true;
 		
 		System.out.println("----------------------");
-<<<<<<< HEAD
+
 		System.out.println("인턴스 변수의 값을 변경");
-=======
+
 		System.out.println("인스턴스 변수의 값을 변경");
->>>>>>> 7f447c973bf3e0e73d3979a5eb915ed57f018080
+
 		System.out.println("----------------------");
 		
 
