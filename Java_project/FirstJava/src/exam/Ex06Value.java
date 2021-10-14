@@ -4,11 +4,11 @@ public class Ex06Value {
 	
 	public static void main(String[] args) {
 		
-		int[] arr = {100, 240, 180, 60, 150, 90, 30, 200};
-		int[] arr2 = {100, 240, 90, 200};
+		int[] arr = {100, 240, 180, 200};
+
 		
-		System.out.println(maxValue(arr2));
-		System.out.println(miniValue(arr2));
+		System.out.println(maxValue(arr));
+		System.out.println(miniValue(arr));
 	}
 	
 	public static int miniValue(int[] arr) {
