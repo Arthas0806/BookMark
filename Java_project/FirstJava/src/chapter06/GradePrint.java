@@ -27,8 +27,19 @@ public class GradePrint {
 			}
 			System.out.println();
 		}
-		System.out.println("학생당 평균 =================================");
-		// 평균 점수
+		
+			
+		System.out.println("학생당(국수영) 총점 =================================");
+		for(int[] arr : scoreArray) {
+			int sum = 0;
+			for(int num : arr) {
+				sum += num;
+			}
+			
+			System.out.print(sum + " \t");
+		}
+
+		System.out.println("\n학생당(국수영) 평균 =================================");
 		for(int[] arr : scoreArray) {
 			int sum = 0;
 			for(int num : arr) {
@@ -37,8 +48,8 @@ public class GradePrint {
 			int average = sum / 3;
 			System.out.print(average + " \t");
 		}
-		System.out.println("\n과목당 평균 =================================");
-		
+
+		// 과목당 점수 구하기
 		for(int i = 0; i < scoreArray.length; i++) {
 			korean += scoreArray[i][0];
 		}
@@ -51,7 +62,16 @@ public class GradePrint {
 			english += scoreArray[i][2];
 		}
 		
+		
+		System.out.println("\n과목당 총점=========================================================");
+		
+		System.out.println("국어 : " + korean + "\n수학 : " + math + "\n영어 : " + english);
+		
+		System.out.println("과목당 평균 =================================");
+		
 		System.out.println("국어 : " + korean/10 + "\n수학 : " + math/10 + "\n영어 : " + english/10);
+		
+		
 		
 	}
 	
