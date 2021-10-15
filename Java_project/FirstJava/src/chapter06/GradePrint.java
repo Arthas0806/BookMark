@@ -4,6 +4,9 @@ public class GradePrint {
 
 	public static void main(String[] args) {
 		
+		int korean = 0;
+		int math = 0;
+		int english = 0;
 		
 		int[][] scoreArray = new int[10][3];
 		
@@ -24,7 +27,7 @@ public class GradePrint {
 			}
 			System.out.println();
 		}
-		System.out.println("평균 =================================");
+		System.out.println("학생당 평균 =================================");
 		// 평균 점수
 		for(int[] arr : scoreArray) {
 			int sum = 0;
@@ -34,8 +37,26 @@ public class GradePrint {
 			int average = sum / 3;
 			System.out.print(average + " \t");
 		}
+		System.out.println("\n과목당 평균 =================================");
+		
+		for(int i = 0; i < scoreArray.length; i++) {
+			korean += scoreArray[i][0];
+		}
+		
+		for(int i = 0; i < scoreArray.length; i++) {
+			math += scoreArray[i][1];
+		}
+		
+		for(int i = 0; i < scoreArray.length; i++) {
+			english += scoreArray[i][2];
+		}
+		
+		System.out.println("국어 : " + korean/10 + "\n수학 : " + math/10 + "\n영어 : " + english/10);
 		
 	}
+	
+	
+	
 	
 	
 	
