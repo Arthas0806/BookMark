@@ -1,7 +1,7 @@
 package chapter02;
 
 public class Person {
-
+	
 //	2.Person 클래스를 만들어 보고, 아래의 회원 정보를 저장하는 변수들을 선언해봅시다. 
 //	   변수이름을 작성하는 규칙에 맞게 직접 변수 이름을 정의해 보세요.
 //	① 회원이름을 저장하는 변수
@@ -14,11 +14,9 @@ public class Person {
 	//String juminNumber;	// 주민등록번호
 	private long juminNumber;
 	
-	
 	// setter / getter
 	// setter => 값을 받아서 변수에 저장
 	public void setMemberName(String name) {
-		
 		memberName=name;
 	}
 	// getter => 인스턴스 변수를 반환

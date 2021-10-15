@@ -57,7 +57,11 @@ public class Member {
 		//member.hasBook = true;
 		
 		System.out.println("----------------------");
+
+		System.out.println("인턴스 변수의 값을 변경");
+
 		System.out.println("인스턴스 변수의 값을 변경");
+
 		System.out.println("----------------------");
 		
 
