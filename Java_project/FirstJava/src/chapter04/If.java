@@ -64,6 +64,8 @@ public class If {
 		test.vaccine(year);
 		test.checkup(year);
 	}
+	
+	
 }
 
 
