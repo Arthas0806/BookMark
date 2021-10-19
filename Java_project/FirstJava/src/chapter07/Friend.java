@@ -1,6 +1,9 @@
 package chapter07;
 
-public class Friend {
+
+// 추상 클래스로 만들기 : 추상 메소드 생성
+
+public abstract class Friend {
 	
 	// 개인 정보 관리
 	// 정보를 저장하는 변수
@@ -20,10 +23,11 @@ public class Friend {
 	public void showData() {
 		System.out.println("이름 : " + this.name);
 		System.out.println("전화 : " + this.phoneNumber);
-		System.out.println("wnth : " + this.address);
+		System.out.println("주소 : " + this.address);
 	}
 	
 	// 오버라이딩
-	public void showBasicInfo() {}
-	
+//	public void showBasicInfo() {}
+	// 추상 메소드 : 처리 블록이 없다!, 미완성된 메소드, 상속을 통해 완성시켜야 하는 메소드
+	public abstract void showBasicInfo();
 }
