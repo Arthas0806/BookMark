@@ -13,6 +13,9 @@ public class HybridWaterCar extends HybridCar{
 		System.out.println(car.door);
 		System.out.println(HybridCar.door);
 		System.out.println(HybridWaterCar.door);
+		System.out.println(hdCar.gasolineguage);
+		System.out.println(hdCar.electronicGuage);
+		System.out.println(hdCar.waterGuage);
 	}
 
 
