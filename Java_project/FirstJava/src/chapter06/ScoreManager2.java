@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ScoreManager {
+public class ScoreManager2 {
 	// 배열을 가지고 있고.
 	// 배열의 주요 요소를 추가, 검색, 삭제 기능
 	
@@ -12,19 +12,13 @@ public class ScoreManager {
 	// 2021.10.20 : 배열을 ArrayList로 변경
 	
 	public static final Scanner sc = new Scanner(System.in);
-	
-
-//	private Student[] score;
 	private List<Student> score;
 	
-	private int num;
-	
-	public ScoreManager(int size) {
+	public ScoreManager2(int size) {
 		score = new ArrayList<Student>(size);
-//		num = 0;
 	}
 	
-	public ScoreManager() {
+	public ScoreManager2() {
 		this(10);
 	}
 	
@@ -43,20 +37,8 @@ public class ScoreManager {
 	// 데이터 추가  : 배열의 요소로 추가 -> Student 타입의 참조값
 	public void insertScore (Student s) {
 		score.add(s);
-//		score[num++] = s;
 		
 	}
-	
-	// 데이터 검색 : 이름 기준 검색 -> 배열의 요소들 중 이름(검색어)을 비교
-//	public void searchData(String name) {
-//		
-//		for(int i = 0; i < num ; i++) {
-//			// 검색어와 요소 객체의 name 문자열을 비교
-//			if(score[i].getName().equals(name)) {
-//				System.out.println(score[i]);
-//			}
-//		}
-//	}
 	
 	// 데이터 삭제 : 이름 기준으로 삭제 -> 배열에 요소에 손흥민 정보를 지운다! -> 손흥민 객체를 참조하는 값이 없으면 데이터가
 	
@@ -68,11 +50,6 @@ public class ScoreManager {
 		int index = serchIndex(name);
 		
 		if(index > -1) {
-			// 시프트 : 참조값을 지운다! -> 정보 삭제
-//			for(int i = index; i < num - 1; i++) {
-//				score[i] = score[i + 1];
-//			}
-//			num--;
 			score.remove(index);
 			System.out.println("데이터가 삭제되었습니다.");
 		}else {
