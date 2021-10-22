@@ -9,6 +9,18 @@ public class Contact {
 	private String group;
 	private String birth;
 	
+	public Contact(String name, String phone, String email, String address, String group, String birth){
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.address = address;
+		this.group = group;
+		this.birth = birth;
+	}
+	
+	public Contact() {
+		
+	}
 	
 	public String getName() {
 		return name;
@@ -70,13 +82,14 @@ public class Contact {
 	}
 
 
-	Contact(String name, String phone, String email, String address, String group, String birth){
-		this.name = name;
-		this.phone = phone;
-		this.email = email;
-		this.address = address;
-		this.group = group;
-		this.birth = birth;
+	public void printAll() {
+		System.out.println(name);
+		System.out.println(phone);
+		System.out.println(email);
+		System.out.println(address);
+		System.out.println(group);
+		System.out.println(birth);
 	}
 
+    
 }
