@@ -1,8 +1,5 @@
 
--- 주석입니다.
--- 예제를 위한 테이블 생성, 데이터 삽입하는 SQL
 
--- 테이블을 삭제
 --DROP TABLE  emp;
 --DROP TABLE dept;
 --DROP TABLE salgrade;
