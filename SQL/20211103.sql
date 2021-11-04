@@ -47,3 +47,8 @@ select * from dept02;
 insert into dept02 select * from dept;
 insert into dept02 select * from dept02;
 select * from dept02;
+
+
+select rownum, e.*
+from (select * from emp order by DBMS_RANDOM.RANDOM) e
+;
