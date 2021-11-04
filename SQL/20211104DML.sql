@@ -56,3 +56,66 @@ set hiredate = sysdate
 where substr(hiredate, 1, 2) = '87'
 ;
 select * from emp01 where substr(hiredate, 1, 2) = '21';
+
+-- 1. SCOTT 사원의 부서번호는 40번으로, 직급은 MANAGER로 한꺼번에 수정하도록 합시다.
+update emp01
+set deptno = 40, job = 'MANAGER'
+where ename = 'SCOTT'
+;
+
+select * from emp01 where ename = 'SCOTT';
+
+-- 2. SCOTT 사원의 입사일자는 오늘로, 급여를 50으로 커미션을 4000으로 수정합시다.
+update emp01
+set hiredate = sysdate, sal = 50, comm = 4000
+where ename = 'SCOTT'
+;
+
+-- 1. 20번부서의 지역명을 40번 부서의 지역명으로 변경하기 위해서 서브 쿼리문을 사용해 봅시다.
+drop table dept01;
+
+create table dept01
+as
+select * from dept;
+
+select * from dept01;
+-- 20번 부서의 지역명을 40번 부서의 지역명으로 변경하기 위해서
+-- 서브 쿼리문을 사용해 봅시다.
+
+update dept01
+set loc = ( select loc
+            from dept01
+            where deptno = 40)
+where deptno = 20
+;
+
+-- 서브 쿼리를 이용해서
+-- 부서 번호가 20인 부서의 부서명과 지역명을
+-- 부서 번호가 40번인 부서와 동일하게 변경하도록 합시다.
+update dept01
+set (dname, loc) = (select dname, loc from dept01 where deptno = 40)
+where deptno = 20
+;
+
+-- "행"을 삭제하는 delete  문
+-- dept01 테이블의 모든 데이터(행)을 지우자
+delete from dept01;
+delete from emp01;
+select * from emp01;
+select * from dept01;
+
+rollback; -- > 마지막 커밋된 위치로 이동, 마지막 커밋후 작업된 DML 반영이 되지 않는다!
+
+-- 부서 테이블에서 30번 부서만 삭제합니다
+delete from dept01 where deptno = 30;
+select * from dept01;
+commit;
+
+
+-- 사원 테이블에서 부서명이 SALES인 사원을 모두 삭제해봅시다.
+delete from emp01
+where deptno = (select deptno from dept where dname = 'SALES')
+;
+
+select * from emp01;
+
