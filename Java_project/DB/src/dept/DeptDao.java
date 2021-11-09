@@ -11,6 +11,26 @@ import java.util.List;
 // Data Access Object : Sql 처리만 하는 클래스
 public class DeptDao {
 
+	// 변수가 없는 클래스  , 기능만 있는 클래스
+	// 인스턴스를 하나만 만들어써도 된다!!!
+	// 인스턴스를 여러개 만들어 쓰게 하지 말자!!!!
+	// 싱글톤 패턴
+	// 인스턴스 하나만 만들어 사용하도록하는 패턴
+	// 외부에서 인스턴스를 생성하지 못하도록 처리! -> 생성자의 접근제어자를 private
+	private DeptDao(){}
+	
+	// 클래스 내부에서 인스턴스를 생성!!! , 이 이스턴스를 직접 접근 안되도록!
+	private static DeptDao dao = new DeptDao();
+	
+	// 내부에서 만들어진 인스턴스를 특정 메소드를 이용해서 받을 수 있도록 해주자!!!
+	static public DeptDao getInstance() {
+		return dao;
+	}
+	
+	
+	
+	
+	
 	// 전체 리스트 구하는 메소드 : select -> Connection을 전달 받고, List<Dept>
 	public List<Dept> selectAllList(Connection conn) {
 
@@ -39,6 +59,8 @@ public class DeptDao {
 		return result;
 	}
 
+	
+	
 	// 부서 정보를 검색 메소드 : select -> Connection을 전달 받고, 부서 번호, Dept
 	public Dept selectByDeptno(Connection conn, int deptno) {
 
@@ -74,6 +96,8 @@ public class DeptDao {
 		return dept;
 	}
 
+	
+	
 	// 부서 정보를 입력 메소드 : insert -> Connection을 전달 받고, Dept 객체를 전달 받아서 입력
 	public int insertDept(Connection conn, Dept dept) {
 
@@ -104,6 +128,8 @@ public class DeptDao {
 
 	}
 
+	
+	
 	// 부서 정보를 수정하는 메소드 : update -> Connection을 전달 받고, Dept 객체를 전달 받아서 수정
 	public int editDept(Connection conn, Dept dept) {
 
@@ -132,6 +158,8 @@ public class DeptDao {
 		return resultCnt;
 	}
 
+	
+	
 	// 부서 정보를 삭제하는 메소드 : delete -> Connection을 전달 받고, 부서번호(PK)를 전달 받아 삭제
 	public int deleteDept(Connection conn, int deptno) {
 

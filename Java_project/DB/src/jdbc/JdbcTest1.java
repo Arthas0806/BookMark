@@ -1,4 +1,4 @@
-package day1108;
+package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,7 +15,7 @@ public class JdbcTest1 {
 		ResultSet rs = null;
 		
 		try {
-			// 1. 드라이버 로드 : 프로그램에서 한번만 실행하면 된다!!!
+			// 1. 드라이버 로드
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			// 2. 연결 : Connection
@@ -29,7 +29,6 @@ public class JdbcTest1 {
 			System.out.println("데이터베이스 연결 성공!");
 			
 			// 3. 작업 : CRUD
-			
 			
 			
 			

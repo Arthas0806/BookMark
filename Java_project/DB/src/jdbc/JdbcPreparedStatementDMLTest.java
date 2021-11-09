@@ -1,19 +1,20 @@
-package day1108;
+package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JdbcStatementDMLTest {
+public class JdbcPreparedStatementDMLTest {
 
 	public static void main(String[] args) {
 		
 		Connection conn = null;
-		Statement stmt = null;
+		PreparedStatement pstmt = null;
 
 		try {
 			// 1. 드라이버 로드
@@ -29,18 +30,21 @@ public class JdbcStatementDMLTest {
 			
 			System.out.println("데이터베이스 연결 성공!");
 			
-			// 3. 작업 : CRUD -> Statement객체 생성
-			stmt = conn.createStatement();
+			// 3. 작업 : CRUD -> PreparedStatement객체 생성 , 먼저 SQL 등록 후 사용
+			String sql = "insert into dept values (?, ?, ?)";
 			
-			// Sql : insert
-			String sql = "insert into dept (deptno, dname, loc) values (50, 'test', 'SEOUL')";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1,  90);
+			pstmt.setString(2, "DEV");
+			pstmt.setString(3, "PUSAN");
 			
-			int cnt = stmt.executeUpdate(sql);
+			// DML 실행
+			int resultCnt = pstmt.executeUpdate();
 			
-			if(cnt>0) {
+			if(resultCnt > 0 ) {
 				System.out.println("입력되었습니다.");
-			} else {
-				System.out.println("입력 실패!");
+			} else  {
+				System.out.println("입력실패!");
 			}
 			
 			
@@ -54,9 +58,9 @@ public class JdbcStatementDMLTest {
 			e.printStackTrace();
 		} finally {
 			
-			if(stmt != null) {
+			if(pstmt != null) {
 				try {
-					stmt.close();
+					pstmt.close();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
