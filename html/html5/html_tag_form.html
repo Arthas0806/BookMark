@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TAG</title>
+</head>
+<body>
+    <form method="get">
+
+        <hr>
+        <input type="button" value="내가만든 버튼"><br>
+        <input type="submit" value="로그인/회원가입"><br>
+        <input type="reset" value="초기화"><br>
+        <input type="image" src="images/mini2.png">
+        <hr>
+        파일첨부<input type="file" name="userphoto"><br>
+        나이 0<input type = "range" min = "0" max = "150" name = "age">150<br>
+
+        입력폭이 보이지 않는 hidden: <input type="hidden" name "midx" value="11">
+        <hr>
+        tel <input type="tel" name = "tel"><br>
+        url <input type="url" name="url"><br>
+        숫자 <input type="number" name = "number"><br>
+        이메일 <input type="email name = 'email"><br>
+
+        <hr>
+        <input type="date" name = "date"><br>
+        <!-- <input type="datetime" name = "datetime"><br> => 기능 소멸 -->
+        <input type="datetime-local" name = "datetime-local"><br>
+        <input type="month" name = "month"> <br>
+        <input type="week" name = "week"> <br>
+        <input type="time" name = "time">
+
+        <hr>
+
+        <input type = "submit">
+        <hr>
+        <input type="color" name="color"> <br>
+        
+        <hr>
+        <input type="radio" name="program" value = "java">자바<br>
+        <input type="radio" name="program" value = "HTML5">HTML5<br>
+        <input type="radio" name="program" value = "CSS3">CSS3<br>
+        <input type="radio" name="program" value = "javascript">javascript<br>
+        <hr>
+        이름 : <input type = "text" name = "username"> <br> <!-- 액션이 없는 default는 자기 자신으로 온다 -->
+         ID : <input name = "userid"><br>
+         pw : <input type = "password" name = "pw"><br>    <!-- 아무것도 안하면 text가 나온다.  -->
+
+         <hr>
+         <input type = "checkbox" name = "lang" value = "ko"> 한글 <br>
+         <input type = "checkbox" name = "lang" value = "en"> 영어 <br>
+
+
+
+
+        
+
+    </form>
+    
+</body>
+</html>
