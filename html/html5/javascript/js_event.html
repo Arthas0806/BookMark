@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1{
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        input[type = submit]{
+            padding:10px;
+            font-size: 10px;
+        }
+
+
+    </style>
+    <script>
+
+        window.onload =function(){
+
+            // 1. 이벤트 적용 : 캐스팅 -> 이벤트 속성에 이벤트 핸들러 할당!
+            var btn1 = document.getElementById('btn1');
+            // 이벤트 속성에 핸들러 할당
+            btn1.onclick = function(){
+            alert('h1 태그안 영역을 마우스로 클릭');
+             };
+
+             //한번 클릭 이벤트가 발생하고 이베트 제거
+             btn1.conclick = null;
+
+            // 캐스팅 이벤트 속성 
+            document.getElementById('btn2').onclick = function(){
+                //this => 이벤트가 발생한 객체를 가르킨다.
+                this.style.backg
+            }
+        };
+        
+    </script>
+</head>
+<body>
+
+    <form id = "form" >
+
+        <input type="submit">
+
+    </form>
+
+
+
+
+
+
+
+    
+    <h1 id = "btn1">Click</h1>
+
+</body>
+</html>

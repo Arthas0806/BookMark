@@ -1,0 +1,34 @@
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Noto+Sans+KR&display=swap');
+
+/* 기본설정 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+/* 타이틀 폰트 */
+.title_font{
+    font-family: 'Estonia', cursive;
+}
+
+/* main_wrap 설정 */
+#main_wrap{
+    background-color: white;
+    width: 778px;
+    height: 300px;
+    padding: 10px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    margin: 10px auto;
+
+    box-shadow: 5px 5px 10px #ccc;
+}
