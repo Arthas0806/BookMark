@@ -16,9 +16,15 @@ public class Signservlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("utf-8");
+		
+		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
+		
+		// 응답하는 데이터 타입
+		response.setContentType("text/html); charset=utf-8");
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
