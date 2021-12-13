@@ -27,10 +27,10 @@ window.onload = function(){
     // 폼태그 캐스팅
     var regForm = document.getElementById('regForm');
 
-    var userId = document.querySelector('#userId');
-    var pw = document.querySelector('#pw');
-    var repw = document.querySelector('#repw');
-    var userName = document.querySelector('#userName');
+    var userId = $('#userId');
+    var pw = $('#pw');
+    var repw = $('#repw');
+    var userName = $('#userName');
 
     // 이벤트 설정 : 입력
     regForm.onsubmit = function(){
