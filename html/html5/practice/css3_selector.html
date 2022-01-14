@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자</title>
+    <style>
+        /*선택자{ 속성이름 : 속성값;속성이름:속성값}*/
+        *{
+            color: red;
+            /* background-color: royalblue; */
+        }
+
+        h1{
+            background-color: seagreen;
+        }
+
+        #title{
+            font-style: italic;
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+
+        .bold1{
+            font-weight: lighter;
+        }
+
+        p{
+            color: blue;
+        }
+        
+       
+        body, h1, p {
+            margin: 0px;
+        }
+
+        #header{
+            width: 300px;
+            height: 100px;
+
+            background-color: yellow;
+
+            /* margin: 10px 20px 30px 40px; 상 하 좌 우 */
+            /* margin: 30px 10px; */
+            margin: 0 auto;
+        }
+
+        div#contents{
+            width: 300px;
+            height: 300px;
+
+            background-color: green;
+
+            /* margin: 10px 20px 30px 40px; 상 하 좌 우 */
+            /* margin: 30px 10px; */
+            margin: 0 auto;
+        }
+
+        h1.title{
+            font-size: 30px;
+            font-weight: bold;
+            background-color: black;
+        }
+
+    </style>
+
+    <!-- 속성 선택자 -->
+    <style>
+        input[type] {
+            border: 5px solid #000000;
+        }
+
+        input[type=text]{
+            background-color: blue;
+            
+        }
+
+        input[type=password]{
+            background-color: chartreuse;
+            
+        }
+    </style>
+
+    <!-- 범위 한정 선택 : 자손, 후손-->
+    <style>
+        #header1 h1{
+            background-color: white;
+            color: red;
+        }
+
+        #section h1 {
+            color: sienna;
+        }
+
+        #header1>h1{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="header1">
+        <h1 class="title">제목입니다.</h1>
+        <div id="nav">
+            <h1>네비게이션</h1>
+        </div>
+    </div>
+
+    <div id="section">
+        <h1 class="title">제목 2입니다.</h1>
+        <p>내용이 표현됩니다.</p>
+    </div>
+
+    <hr>
+    
+    <input type="text"> <input type="password">
+
+    <hr>
+    <div id="header">
+        <h1 class="title">Header</h1>
+    </div>
+    <div id="contents">
+        <img src="../images/iron.png" alt="">
+    </div>
+    <div id="footer"></div>
+    
+
+    <hr>
+    <h1 id="title">"4명이나 6명이나"…다시 9시에 묶인 자영업자들 낙담</h1>
+    <p class="bold">"아르바이트도 새로 뽑았는데"…점등 시위 예정대로</p>
+    <p>촛불 든 자영업자들
+        (서울=연합뉴스) 한상균 기자 = 전국자영업자비상대책위원회가 10일 밤 국회 앞에서 정부의 코로나19 방역대책에 항의하는 집회를 하고 있다. 2022.1.10 xyz@yna.co.kr</p>
+    <p class="bold1">(서울=연합뉴스) 김치연 이승연 기자 = 정부가 17일부터 내달 6일까지 사적 모임 인원을 6인으로, 식당·카페 등의 영업시간은 오후 9시로 제한하자 자영업자들은 기대에 못 미치는 발표라며 낙담했다.</p>
+    <h1>footer</h1>
+</body>
+</html>

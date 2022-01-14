@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--범위 한정 선택 : 자손 후손-->
+    <style>
+        /* 동위 선택자 : +, ! */
+
+        /* *{
+            background-color: paleturquoise;
+            color: red; 
+        } */
+
+        #head1+h1 {
+            color: blue;
+        }
+
+        #head1~h2{
+            background-color: orange;
+        }
+    </style>
+
+
+    <!-- 반응 선택자-->
+    <style>
+
+        /* 마우스 커서가 특정 요소 위로 올라갔을 때 반응 */
+        h3:hover{
+            color: royalblue;
+            background-color: saddlebrown;
+        }
+
+        h3:active{
+            color: blue;
+            background-color: green;
+        }
+
+
+    </style>
+
+    <!--상태 선택자-->
+    <style>
+        input:enabled {
+            border:5px solid #aaaaaa;
+        }
+
+        input:disabled{
+            background-color: darkgray;
+        }
+
+        input:focus{
+            background-color: orange;
+            border:5px solid darkolivegreen;
+        }
+
+        #article{
+            height: 300px;
+            overflow: hidden;
+        }
+
+        input[type=checkbox]:checked+#article{
+            height: 0px;
+        }
+
+        input[type=checkbox]{
+            display: none;
+        }
+
+        li:nth-child(2n){
+            background-color: violet;
+            color: yellow;
+        }
+
+        li:nth-child(2n + 1){
+            background-color: yellowgreen;
+            color: cadetblue;
+        }
+
+        li:first-child{
+            background-color: deeppink;
+            color: white;
+
+            border-radius: 30px 0px 0px 30px;
+        }
+        li:last-child{
+            background-color: deeppink;
+            color: white;
+
+            border-radius: 0px 30px 30px 0px;
+        }
+
+        /* 리스트 태그를 수평 방향으로 나열 */
+        ul{
+            overflow: hidden;
+
+            /* 리스트 스타일 */
+            list-style: none;
+        }
+        li{
+            float: left;
+            padding: 10px 30px;
+        }
+        #photo{
+            border-radius: 50%;
+            border: 3px solid #aaaaaa;
+            width: 100px;
+        }
+
+    </style>
+
+    <!-- 링크 선택자-->
+    <style>
+
+        a:link{
+            color: green;
+            text-decoration: none;
+        }
+
+        a:visited{
+            color:green;
+        }
+
+        a:hover{
+            color: rgb(0, 0, 0);
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    test
+    <a>네이버</a>
+    <a href="test">네이버</a>    
+    <a href="https://www.naver.com">NAVER</a>
+
+
+    <hr>
+
+    <img id="photo" src="../images/mini.png" alt="미니언즈">
+
+    <hr>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+
+
+
+    <hr>
+    <label for="btn">기사 가리기</label><input id="btn" type="checkbox">
+    <div id="article">
+        <h1>5∼11세도 코로나19 백신 접종 검토…"내달 접종계획 마련</h1>
+        <p>"소아백신 채택한 외국사례 검토중…식약처 허가 나면 도입 시기 결정"</p>
+    </div>
+
+    <hr>
+
+    <input> <input disabled>
+
+    <hr>
+
+    <h3>반응 선택자</h3>
+
+    <hr>
+
+    <div> <h1 id="head1"> Header1 - 1 </h1>
+        <h1> Header1 - 2 </h1>
+        <h2> Header2 - 1 </h2>
+        <h2> Header2 - 2 </h2>
+        <h2> Header2 - 3 </h2>
+        <h2 >Header2 - 4 </h2>
+        <h2> Header2 - 5 </h2>
+    </div>
+   
+
+</body>
+</html>

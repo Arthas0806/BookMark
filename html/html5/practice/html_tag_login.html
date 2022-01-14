@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: aquamarine;
+        }
+        h1{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1>로그인 폼</h1>
+    <form action="">
+        <fieldset>
+            <legend>로그인 폼</legend>
+            <table>
+                <tr>
+                    <td>순번</td>
+                    <td>
+                        <input type="text" value="11"
+                        readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>선택</td>
+                    <td>
+                        <select name="loginType">
+                            <option value="member">회원</option>
+                            <option value="admin">admin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="userid"
+                        required
+                        placeholder="아이디를 입력하세요."
+                        autofocus
+                        minlength="3"
+                        maxlength="12"
+                        ></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" name="password"
+                        required
+                        placeholder="비밀번호를 입력하세요."
+                        ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+
+
+
+        </fieldset>
+    </form>
+</body>
+</html>
