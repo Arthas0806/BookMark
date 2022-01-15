@@ -7,7 +7,7 @@
 #btn{
     /* 크기 조정 */
     width: 300px;
-    height: 150px;
+    height: 100px;
 
     background-color: orangered;
 
@@ -18,7 +18,19 @@
     /* 테두리 border */
     border: 20px solid silver;
     border-radius: 40px;
-    
+ 
+    background-image: url('../iron.png');
+    background-size: 25%;
+    /*  반복 형태  */
+    background-repeat: no-repeat;
+    background-position: left;
+    /* attachment 부착형태 */
+    /* background-attachment: fixed; */
+
+}
+
+#btn:hover{
+    border: 20px solid #ddd;
 }
 
 #btn>a{
@@ -32,5 +44,9 @@
     /* 가운데 정렬 */
     text-align: center;
 
-    line-height: 150px;
+    line-height: 100px;
+}
+
+#btn>a:hover{
+    color: snow;
 }

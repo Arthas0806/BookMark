@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>onetrue</title>
+
+    <style>
+
+        div{
+            /* border: 1px solid #000; */
+
+            text-align: center;
+        }
+
+        #main_wrap{
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #000;
+
+            /* 그림자 효과 */
+            box-shadow: 5px 5px 10px #ccc;
+        }
+
+        #header{
+            /* 너비 높이 */
+            /* width: 800px; */
+            height: 100px;
+
+            margin: 0 auto;
+        }
+
+        #nav{
+            /* 너비 높이 */
+            width: 800px;
+            /* height: 30px; */
+
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            margin: 0 auto;
+
+        }
+
+        #wrap{
+            /* width: 800px;  보더 포함 802
+
+            margin: 0 auto; */
+
+            /* 넘치는 부분을 가린다. */
+            overflow: hidden;
+            border: 0;
+        }
+
+        #content{
+            width: 598px;
+            height: 250px;
+
+            border-right: 1px solid #000;
+            float: left;
+            
+        }
+
+        /* border값이 들어가있다. */
+        #aside{
+            width: 198px;
+            height: 100px;
+
+            /* border-bottom: 1px solid #000 ; */
+            float: right;
+        }
+
+        #footer{
+            /* width: 800px;
+            
+            margin: 0 auto; */
+            border-top: 1px solid #000;
+
+            height: 50px;
+        }
+
+        /* 행 단위로 나눈다. */
+
+    </style>
+
+</head>
+<body>
+
+    <!-- 중복을 줄이기 위해 감싼다. -->
+    <div id="main_wrap"> 
+
+        <div id="header">HEADER</div>
+
+        <div id="nav">Navigation</div>
+    
+        <div id="wrap">
+            <div id="content">Content</div>
+            <div id="aside">Aside</div>
+        </div>
+        
+        <div id="footer">Footer</div>
+
+    </div>
+    
+
+</body>
+</html>
