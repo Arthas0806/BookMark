@@ -1,0 +1,36 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#btn{
+    /* 크기 조정 */
+    width: 300px;
+    height: 150px;
+
+    background-color: orangered;
+
+    /* 띄우기 margin */
+    margin-top: 100px;
+    margin-left: 200px;
+
+    /* 테두리 border */
+    border: 20px solid silver;
+    border-radius: 40px;
+    
+}
+
+#btn>a{
+    /* a 는 inline이라 block으로 변환 */
+    display: block;
+
+    font-size: 300%;
+    font-style: italic;
+    font-weight: bold;
+
+    /* 가운데 정렬 */
+    text-align: center;
+
+    line-height: 150px;
+}
