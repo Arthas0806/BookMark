@@ -1,0 +1,156 @@
+/* 웹 폰트 지정 */
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Myeongjo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+body{
+    background-color: gainsboro;
+}
+
+/* 타이틀 폰트 */
+.title_font{
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+/* 폰트 색상 */
+.font_gray{
+    color: gray;
+}
+
+/* margin 값을 위에서 10 아래서 10를 뛰운다. */
+.margin_tb_10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 줄 간격 띄우기 */
+.lineheight_180per{
+    line-height: 180%;
+}
+
+/* main 설정 */
+#main_wrap{
+
+    margin: 5px;
+    width: 1000px; /* padding 값까지 계산*/
+    /* height: 300px; */
+    padding: 10px;
+    background-color: white;
+
+    /* border 처리 */
+    border: 10px solid #ccc;
+    border-radius: 20px;
+
+    /* 중앙에 위치 */
+    margin: 10px auto;
+
+    /* 보더에 그림자 */
+    box-shadow: 5px 5px 30px #aaa;
+
+
+}
+
+/* header 설정 */
+header{
+    padding: 30px;
+}
+
+/* 네비게이션 설정 */
+nav{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    overflow: hidden;
+}
+
+nav>ul{
+    /* ul을 좌측으로 */
+    float: left;
+    /* 글자 앞에 표시 삭제 */
+    list-style: none;
+}
+
+nav>ul>li{
+    float: left;
+    padding: 5px 15px; /* 상하 좌우 */
+    
+}
+
+nav>div{
+    /* div를 우측으로 */
+    float: right;
+}
+
+/* 검색 영역 구현 */
+nav input{
+    border: 1px solid #ccc;
+    padding: 3px 20px;
+
+    margin-top: 3px;
+}
+
+/* nav 밑에 하위 속성인 input text 찾기 */
+nav input[type=text]{
+    width: 100px;
+    border-radius: 20px 0 0 20px;
+
+}
+
+nav input[type=button]{
+    border-radius: 0px 20px 20px 0;
+
+    margin-left: -1px; /* border를 -1을 해서 겹쳐보이게 만듦*/
+    margin-right: 5px; /* 오른쪽에 조금 띄움*/
+}
+
+
+/* Contents 영역 설정 */
+#content{
+    overflow: hidden;
+}
+
+#content>section{
+    width: 70%;
+    float: left;
+}
+
+#content>aside{
+    width: 20%;
+    float: right;
+}
+
+/* 게시글 거리 띄우기 */
+#content>section>article{
+    padding: 20px;
+
+    border-bottom: 1px solid #ccc;
+
+    /* 바로 밑에 선이 그어지지 않게 띄워준다. */
+    
+}
+
+#content>section>article>img{
+    width: 430px;
+    height: 280px;
+}
+
+/* aside 영역 설정 */
+#content>aside>h3{
+    margin-top: 40px;
+}
+
+#content>aside>ul>li{
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 10px;
+}
+
+/* footer 설정 */
+footer{
+    height: 30px;
+    line-height: 30px;
+}
