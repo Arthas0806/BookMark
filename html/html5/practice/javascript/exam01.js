@@ -32,3 +32,7 @@ if(numberInput % 2 == 0){
     // NaN
     console.log(numberInput);
 }
+
+var msg = (numberInput > 0) ? '양수' : (numberInput < 0)? '음수' : '0';
+console.log('입력된 숫자는 ', msg);
+console.log('입력된 숫자는 ', (numberInput > 0) ? '양수' : (numberInput < 0) ? '음수' : '0' );
