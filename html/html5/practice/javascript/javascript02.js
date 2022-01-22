@@ -26,6 +26,7 @@ if(typeof(value) == 'undefined'){
 console.log('-------------------------------------');
 
 
+
 // 브라우저가 HTML 문서의 모든 내용을 메모리에 올리는과정이 끝날 때 발생하는 이벤트 등록
 // window.onload = function(){
 //     var html = document.body.innerHTML;
