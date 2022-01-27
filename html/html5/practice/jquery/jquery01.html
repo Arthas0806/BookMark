@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <title>jquery</title>
+
+    <script>
+        // $(function(){
+        //     $('요소 선택').css('스타일 속성명', '값');
+        // });
+
+        $(function(){
+            $('#title').css('color', 'red');
+        });
+
+        // 선택자의 종류
+        /*
+        1. 기본 선택자 
+            - 직접 선택자(id class tag명을 이용해서 선택하는 것),
+            - 근접 선택자(자식 요소 후손 요소) : $().next().css();
+        2. 탐색 선택자
+            - 위치 선택자 : 인덱스의 위치를 파악해서 적용? $().eq(index).css
+            - 속성 선택자 : 
+            $('input[type=text]').css({'background-color' : 'orange'});
+        3. 객체 조작
+            - 선택한 요소 삭제, 생성, 복제, 속성 변경
+            $('.wrap_1 p').eq(1).removeClass('active');
+            $('.wrap_1').append('<p>텍스트2</p>');
+        */
+
+
+        // 이벤트
+        // 사이트에 방문자가 취하는 모든 동작
+
+        // 핸들러란? 이벤트가 발생했을 때 호출되는 함수
+
+        // 이벤트 대상 : 버튼1, 버튼2
+        // 이벤트 종류 : click, mouseover
+        // 이벤트 핸들러 : 경고창
+
+        // 단독이벤트 등록
+        // $('이벤트 대상 선택').이벤트 종류(funtion(){
+            // 자바스크립트 코드;
+        // });
+
+        // 그룹 이벤트 등록
+
+        // $('이벤트 대상 선택').on('이벤트 종류', funtion(){
+            // 자바스크립트 코드;
+        // });
+
+        
+    </script>
+</head>
+<body>
+    <h1 id="title">Test중입니다.</h1>
+</body>
+</html>
