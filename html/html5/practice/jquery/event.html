@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+
+        // 이벤트
+        // 사이트에 방문자가 취하는 모든 동작
+
+        // 핸들러란? 이벤트가 발생했을 때 호출되는 함수
+
+        // 이벤트 대상 : 버튼1, 버튼2
+        // 이벤트 종류 : click, mouseover
+        // 이벤트 핸들러 : 경고창
+
+        // 단독이벤트 등록
+        // $('이벤트 대상 선택').이벤트 종류(funtion(){
+            // 자바스크립트 코드;
+        // });
+
+        // 그룹 이벤트 등록
+
+        // $('이벤트 대상 선택').on('이벤트 종류', funtion(){
+            // 자바스크립트 코드;
+        // });
+
+        // $(function(){
+        //     $('.btn1 a').mouseover(function() {
+        //         alert('hello');
+        //     });
+        //     $('.btn1 a').focus(function() {
+        //         alert('hello');
+        //     });
+        // });
+
+        $(function(){
+            $('.btn1 a').on('click', function(){
+                var ts = $(this);
+                $('.btn1').next('ul').filter(':visible').hide();
+                ts.parent().next().show();
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 이벤트 -->
+    <!-- 이벤트란 사이트에 방문자가 취하는 모든 동작 -->
+
+    <!-- 핸들러 -->
+    <!-- 이벤트가 발생했을 때 호출되는 함수 -->
+
+    <!-- 단일 이벤트 등록 -->
+    <!-- 1. 이벤트 대상. 2, 이벤트 종류 3. 이벤트 핸들러 -->
+
+    <p class="btn1"><a href="#">이벤트 대상1</a></p>
+    <ul style="display:none;">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+
+    <p class="btn1"><a href="#">이벤트 대상2</a></p>
+    <ul style="display: none;">
+        <li>리스트4</li>
+        <li>리스트5</li>
+        <li>리스트6</li>
+    </ul>
+
+    <!-- 다중 이벤트 등록 -->
+    <!-- 1. $('이벤트 대상 선택').on("이벤트 종류1, 이벤트 종류2 ... 이벤트 종류n",
+        function(){
+        자바스크립트 코드;
+    }); -->
+    
+
+
+</body>
+</html>
