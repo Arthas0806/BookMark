@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/coin/mainCash.css}">
+    <section>
+        <table class="titleName">
+            <tr>
+                <td>
+                    <h2>코인 충전</h2>
+                </td>
+            </tr>
+        </table>
+        <table class="tableCash">
+            <tr>
+                <td><input type="radio" class="radio"></td>
+                <td></td>
+                <td class="text_right">1,000원</td>
+            </tr>
+            <tr>
+                <td><input type="radio" class="radio"></td>
+                <td></td>
+                <td class="text_right">5,000원</td>
+            </tr>
+            <tr>
+                <td><input type="radio" class="radio"></td>
+                <td></td>
+                <td class="text_right">10,000원</td>
+            </tr>
+            <tr>
+                <td><input type="radio" class="radio"></td>
+                <td></td>
+                <td class="text_right">30,000원</td>
+            </tr>
+            <tr>
+                <td><input type="radio" class="radio"></td>
+                <td></td>
+                <td class="text_right">50,000원</td>
+            </tr>
+        </table>
+        <div id="cash">
+            <input type="button" value="결제">
+        </div>
+    </section>
+</div>
+</html>

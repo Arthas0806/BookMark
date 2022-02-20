@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+    nav {
+        background-color: #1F8CE6
+    }
+</style>
+   <div th:fragment="headerFragment">
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white"  style="background-color: #1F8CE6;display: block;margin:0 0px 0 0px">
+            <div class="container" style="display: block">
+                <div style="display: flex">
+                    <div style="color: white;font-family:고딕;font-size: 30px;display: flex">
+                        BITBOOKS
+                    </div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a href="#" class="nav-link"></a>
+                        </li>
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a href="/main/logout" class="nav-link">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin:20px 0px 0px 20px">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="margin-right: 2em">
+                            <img th:src="@{/images/home.png}" style="vertical-align:middle;">
+                            <a href="index3.html"><span style="color:white;font-size:18px;line-height: 25px;height:25px">Home</span> </a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 2em">
+                            <img th:src="@{/images/books.png}" style="vertical-align:middle;">
+                            <a href="/coin/cash"><span style="color:white;font-size:18px; line-height: 25px;height:25px">코인충전</span> </a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 2em">
+                            <img th:src="@{/images/wallet.png}" style="vertical-align:middle;">
+                            <a href="index3.html"><span style="color:white;font-size:18px; line-height: 25px;height:25px">코인충전 내역</span> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <nav class="main-header navbar navbar-expand-md navbar-light navbar-white"  style="background-color: #ffffff;margin:0 0px 0 0px">
+           <div class="container" style="display: block">
+               <div style="margin:0px 0px 0px 100px">
+                   <ul class="navbar-nav">
+                       <li class="nav-item" style="margin-right: 2em">
+                           <a href="index3.html"><span style="color:#000000;font-size:18px;line-height: 25px;height:25px">취미</span> </a>
+                       </li>
+                       <li class="nav-item" style="margin-right: 2em">
+                           <a href="index3.html"><span style="color:#000000;font-size:18px; line-height: 25px;height:25px">직업</span> </a>
+                       </li>
+                       <li class="nav-item" style="margin-right: 2em">
+                           <a href="index3.html"><span style="color:#000000;font-size:18px; line-height: 25px;height:25px">요리</span> </a>
+                       </li>
+                       <li class="nav-item" style="margin-right: 2em">
+                           <a href="index3.html"><span style="color:#000000;font-size:18px; line-height: 25px;height:25px">소설</span> </a>
+                       </li>
+                       <li class="nav-item" style="margin-right: 2em">
+                           <a href="index3.html"><span style="color:#000000;font-size:18px; line-height: 25px;height:25px">외국어</span> </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </nav>
+   </div>
+</html>
